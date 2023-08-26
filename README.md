@@ -57,11 +57,13 @@ Em caso de dúvidas [leia a documentação](https://github.com/nvm-sh/nvm)
 
 - No terminal
 
-  `$ apt install zsh`
+  `$ apt-get install zsh`
 
 - Verifique se foi instalado
 
   `$ zsh --version`
+
+- Torne o zsh padrão adicionado `bash -c zsh` no inicio do arquivo `~/.bashrc`.
 
 Em caso de dúvidas [leia a documentação](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 
@@ -95,16 +97,17 @@ Em caso de dúvidas [leia a documentação](https://github.com/ohmyzsh/ohmyzsh/w
 
   ```
   SPACESHIP_PROMPT_ORDER=(
-  user # Username section
-  dir # Current directory section
-  host # Hostname section
-  git # Git section (git_branch + git_status)
-  hg # Mercurial section (hg_branch + hg_status)
-  exec_time # Execution time
-  line_sep # Line break
-  jobs # Background jobs indicator
-  exit_code # Exit code section
-  char # Prompt character
+  user           # Username section
+  dir            # Current directory section
+  host           # Hostname section
+  git            # Git section (git_branch + git_status)
+  hg             # Mercurial section (hg_branch + hg_status)
+  node           # Node.js section
+  exec_time      # Execution time
+  line_sep       # Line break
+  jobs           # Background jobs indicator
+  exit_code      # Exit code section
+  char           # Prompt character
   )
 
   # USER STYLE
@@ -122,7 +125,7 @@ Em caso de dúvidas [leia a documentação](https://github.com/ohmyzsh/ohmyzsh/w
   SPACESHIP_DIR_TRUNC=1
 
   # EXEC TIME
-  SPACESHIP_EXEC_TIME_PREFIX="🕒"
+  SPACESHIP_EXEC_TIME_PREFIX="🕒 "
   SPACESHIP_EXEC_TIME_ELAPSED=1
   SPACESHIP_EXEC_TIME_PRECISION=0
 
@@ -135,6 +138,8 @@ Para fazer sua própria configuração de tema [leia a documentação](https://s
 - No terminal
 
   `$ bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
+
+- NÃO aceite a configuração padrão, vamos usar as configurações a seguir...
 
 - Abra o arquivo _~/.zshrc_ utilizando um editor de texto e adicione ao final do documento:
 
@@ -185,6 +190,8 @@ Para fazer sua própria configuração de tema [leia a documentação](https://s
   ```
   "terminal.integrated.defaultProfile.windows": "Bash"
   ```
+
+Veja os arquivos prontos no repositório [windows-subsystem-config](https://github.com/raimonesbarros/windows-subsystem-config)
 
 ### Pronto, seu subsistema está pronto para uso.
 
